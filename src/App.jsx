@@ -6,6 +6,9 @@ import Navbar from 'react-bootstrap/Navbar'
 import Nav from 'react-bootstrap/Nav'
 
 import Footer from './components/Footer'
+import Home from './pages/Home'
+import About from './pages/About'
+import CV from './pages/CV'
 
 class App extends React.Component {
   constructor(props) {
@@ -15,7 +18,7 @@ class App extends React.Component {
       headerLinks: [
         { title: "Home", path: '/'},
         { title: "About", path: '/about'},
-        { title: "Contact", path: '/contact'}
+        { title: "CV", path: '/cv'}
       ],
       home: {
         title: "Code 'n' Tonic",
@@ -25,7 +28,8 @@ class App extends React.Component {
       about: {
         title: "About Me"
       },
-      contact: {
+      // Make this a JSON
+      cv: {
         title: "Let's Talk!"
       }
     }
@@ -37,19 +41,22 @@ class App extends React.Component {
       <Router>
         <Container className="p-0" fluid={true}>
           
-          <Navbar className="border=bottom" bg="transparent" expand="lg">
-            <Navbar.Brand>Lucas Knudsen</Navbar.Brand>
+          <Navbar className="border-bottom" bg="transparent" expand="lg">
+            <Navbar.Brand>{this.state.title}</Navbar.Brand>
             
             <Navbar.Toggle className="border-0"aria-controls="navbar-toggle"/>
             <Navbar.Collapse id="navbar-toggle">
               <Nav className="ml-auto">
                 <Link className="nav-link" to="/">Home</Link>
                 <Link className="nav-link" to="/about">About</Link>
-                <Link className="nav-link" to="/contact">Contact</Link>
+                <Link className="nav-link" to="/cv">CV</Link>
               </Nav>
             </Navbar.Collapse>
           </Navbar>
 
+          <Route exact path="/" render={() => <Home title={this.state.home.title} subTitle={this.state.home.subTitle} text={this.state.home.text}/>} />
+          <Route exact path="/about" render={() => <About title={this.state.about.title} />} />
+          <Route exact path="/cv" render={() => <CV title={this.state.home.title} />} />
           <Footer />
 
         </Container>
