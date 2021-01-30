@@ -70,7 +70,7 @@ class Carousel extends React.Component {
     })
 
     return (
-      <Container fluid={true}>
+      <Container fluid={true} classname="p-0">
         <Row className="justify-content-around">
           {itemList}
         </Row>

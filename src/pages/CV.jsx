@@ -25,9 +25,9 @@ class CV extends React.Component {
   render () {
 
     return (
-      <div id={`${this.props.id}-title`} >
+      <div className="full-screen" id={`${this.props.id}-title`} >
         <Hero title={this.props.title} />
-        <Container fluid={true}>
+        <Container className="mt-5" fluid={true}>
           <Row className="justify-content-around">
             <Col >
             <Content>

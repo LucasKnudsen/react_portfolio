@@ -16,6 +16,10 @@ code {
   height: 81px;
 }
 
+.full-screen {
+  height: 82vh;
+}
+
 .beige {
   background-color: antiquewhite;
 }
