@@ -1,10 +1,10 @@
 import React from 'react'
 import { BrowserRouter as Router, Route, Link} from 'react-router-dom' 
-import './App.css';
 import Container from 'react-bootstrap/Container'
 import Navbar from 'react-bootstrap/Navbar'
 import Nav from 'react-bootstrap/Nav'
 
+import './App.css';
 import Footer from './components/Footer'
 import Home from './pages/Home'
 import About from './pages/About'
@@ -22,7 +22,7 @@ class App extends React.Component {
       ],
       home: {
         title: "Code 'n' Tonic",
-        subTitle: "Fizzy creativity & bold functionality with hints of aesthetic design.",
+        subTitle: "Fizzy creativity & bold functionality",
         text: 'Checkout these vintages:'
       },
       about: {
