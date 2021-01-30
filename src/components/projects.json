@@ -1,0 +1,26 @@
+[
+  {
+    "id": 0,
+    "title": "Raket Investor",
+    "subTitle": "Build your own Investment Rocket",
+    "imgSrc": "raketinvestor.gif",
+    "link": "https://raketinvestor.dk",
+    "selected": false
+  },
+  {
+    "id": 1,
+    "title": "Project 2",
+    "subTitle": "Something Really Cool!",
+    "imgSrc": "lucas.png",
+    "link": "",
+    "selected": false
+  },
+  {
+    "id": 1,
+    "title": "Podcast",
+    "subTitle": "Learn more about Investing!",
+    "imgSrc": "podcast.png",
+    "link": "https://open.spotify.com/show/7A0vQ615Htdfl7GWN4nM6P?si=PKGwVrPFR_2EZL4tWbCziQ",
+    "selected": false
+  }
+]
