@@ -1,5 +1,5 @@
 import React from 'react'
-import axios from 'axios'
+// import axios from 'axios'
 import Container from 'react-bootstrap/Container'
 import Row from 'react-bootstrap/Row'
 
@@ -32,7 +32,7 @@ class Carousel extends React.Component {
           id: 2,
           title: "Podcast",
           subTitle: "Learn more about Investing!",
-          imgSrc: "podcast.png",
+          imgSrc: podcast,
           link: "https://open.spotify.com/show/7A0vQ615Htdfl7GWN4nM6P?si=PKGwVrPFR_2EZL4tWbCziQ",
           selected: false
         }
@@ -63,17 +63,16 @@ class Carousel extends React.Component {
 
   };
 
-  itemList = (items) => {
-    return items.map(item =>{
-      return <Card item={item} onClick={(e => this.handleCardClick(item.id, e))} key={item.id}/>
-    })
-  }
-
   render () {
+    const { items } = this.state;
+    const itemList = items.map(item => {
+      return <Card item={item} onClick={(e => this.handleCardClick(item.id, e))} key={item.id} />
+    })
+
     return (
       <Container fluid={true}>
         <Row className="justify-content-around">
-          <h1>Hello +  </h1>
+          {itemList}
         </Row>
       </Container>
     )
