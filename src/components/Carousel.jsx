@@ -1,10 +1,13 @@
 import React from 'react'
 import axios from 'axios'
+import Container from 'react-bootstrap/Container'
+import Row from 'react-bootstrap/Row'
+
 
 import Card from './Card'
-import lucas from '../../assets/images/lucas.png'
-import podcast from '../../assets/images/podcast.png'
-import raketinvestor from '../../assets/images/raketinvestor.gif'
+import lucas from '../assets/images/lucas.png'
+import podcast from '../assets/images/podcast.png'
+import raketinvestor from '../assets/images/raketinvestor.gif'
 
 class Carousel extends React.Component {
   constructor(props) {
@@ -43,7 +46,12 @@ class Carousel extends React.Component {
 
   render () {
     return (
-      <p>Carousel Works</p>
+      <Container fluid={true}>
+        <Row className="justify-content-around">
+          <h1>Hello + {this.state.items.title}</h1>
+          {this.itemList(this.state.items)}
+        </Row>
+      </Container>
     )
   }
 }
