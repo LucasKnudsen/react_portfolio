@@ -14,42 +14,42 @@ class Carousel extends React.Component {
     super(props);
     this.state = {
       items: [],
-    }
+    };
   };
 
-  componenDidMount() {
-    axios.get("./projects.json").then((response)=> {
-      this.setState({ items: response.data })
+  componentDidMount() {
+    axios.get("./data/projects.json").then((response)=> {
+      this.setState({ items: response.data }) 
     });
+    console.log('bla her er jeg')
   }
   // try to make this into hover later
-  handleCardClick = (id, card) => {
-    let items = [...this.state.items];
-    //try with ! instead of tenary to refactor
-    items[id].selected = items[id].selected ? false : true
+  // handleCardClick = (id, card) => {
+  //   let items = [...this.state.items];
+  //   //try with ! instead of tenary to refactor
+  //   items[id].selected = items[id].selected ? false : true
 
-    items.forEach(item => {
-      if(item.id !== id) {
-        item.selected = false;
-      }
-    });
+  //   items.forEach(item => {
+  //     if(item.id !== id) {
+  //       item.selected = false;
+  //     }
+  //   });
 
-    this.setState({ items })
+  //   this.setState({ items })
 
-  };
+  // };
 
-  itemList = (items) => {
-    return items.map(item =>{
-      return <Card item={item} onClick={(e => this.handleCardClick(item.id, e))} key={item.id}/>
-    })
-  }
+  // itemList = (items) => {
+  //   return items.map(item =>{
+  //     return <Card item={item} onClick={(e => this.handleCardClick(item.id, e))} key={item.id}/>
+  //   })
+  // }
 
   render () {
     return (
       <Container fluid={true}>
         <Row className="justify-content-around">
-          <h1>Hello + {this.state.items.title}</h1>
-          {this.itemList(this.state.items)}
+          <h1>Hello + </h1>
         </Row>
       </Container>
     )
