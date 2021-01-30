@@ -1,9 +1,10 @@
 import React from 'react'
+import Hero from '../components/Hero'
 
 const CV = (props) => {
   return (
     <div>
-      CV Works!  
+      <Hero title={props.title} />
     </div>
   )
 }

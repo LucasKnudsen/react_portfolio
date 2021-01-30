@@ -7,6 +7,7 @@ const Footer = () => {
   return (
     <div>
       <footer className="mt-5">
+        
         <Container fluid={true} className="">
           <Row className="border-top justify-content-between p-3">
             <Col className="p-0" md={3} sm={12}>

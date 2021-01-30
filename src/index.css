@@ -12,6 +12,14 @@ code {
     monospace;
 }
 
+.empty-container {
+  height: 81px;
+}
+
+.beige {
+  background-color: antiquewhite;
+}
+
 .l-card {
   margin: 20px;
 }

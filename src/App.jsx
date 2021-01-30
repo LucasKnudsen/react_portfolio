@@ -56,7 +56,7 @@ class App extends React.Component {
 
           <Route exact path="/" render={() => <Home title={this.state.home.title} subTitle={this.state.home.subTitle} text={this.state.home.text}/>} />
           <Route exact path="/about" render={() => <About title={this.state.about.title} />} />
-          <Route exact path="/cv" render={() => <CV title={this.state.home.title} />} />
+          <Route exact path="/cv" render={() => <CV title={this.state.cv.title} />} />
           <Footer />
 
         </Container>
