@@ -36,7 +36,7 @@ const About = (props) => {
           </Content>
         </Col>
         <Col>
-        <img className="l-card-image" src={pineapple}/>
+        <img className="l-card-image" src={pineapple} alt="Pineapple"/>
         </Col>
       </Row>
     </Container>
