@@ -23,14 +23,15 @@ class CV extends React.Component {
   }
 
   render () {
+
     return (
-      <div>
+      <div id={`${this.props.id}-title`} >
         <Hero title={this.props.title} />
         <Container fluid={true}>
           <Row className="justify-content-around">
             <Col >
             <Content>
-              <h1>{this.state.cv.title}</h1>
+              <h1 id={`${this.props.id}-h1`}>{this.state.cv.title}</h1>
               <h4>Experience:</h4>
               <p>{this.state.cv.experience}</p>
               <h4>Education</h4>

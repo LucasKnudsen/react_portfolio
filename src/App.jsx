@@ -23,14 +23,17 @@ class App extends React.Component {
       home: {
         title: "Code 'n' Tonic",
         subTitle: "Fizzy creativity & bold functionality",
-        text: 'Checkout these vintages:'
+        text: 'Checkout these vintages:',
+        id: "home",
       },
       about: {
-        title: "About Me"
+        title: "About Me",
+        id: "about",
       },
       // Make this a JSON
       cv: {
-        title: "Let's Talk!"
+        title: "Let's Talk!",
+        id: "cv",
       }
     }
   }
@@ -47,16 +50,16 @@ class App extends React.Component {
             <Navbar.Toggle className="border-0"aria-controls="navbar-toggle"/>
             <Navbar.Collapse id="navbar-toggle">
               <Nav className="ml-auto">
-                <Link className="nav-link" to="/">Home</Link>
-                <Link className="nav-link" to="/about">About</Link>
-                <Link className="nav-link" to="/cv">CV</Link>
+                <Link id="home" className="nav-link" to="/">Home</Link>
+                <Link id="about" className="nav-link" to="/about">About</Link>
+                <Link id="cv" className="nav-link" to="/cv">CV</Link>
               </Nav>
             </Navbar.Collapse>
           </Navbar>
 
-          <Route exact path="/" render={() => <Home title={this.state.home.title} subTitle={this.state.home.subTitle} text={this.state.home.text}/>} />
-          <Route exact path="/about" render={() => <About title={this.state.about.title} />} />
-          <Route exact path="/cv" render={() => <CV title={this.state.cv.title} />} />
+          <Route exact path="/" render={() => <Home id={this.state.home.id} title={this.state.home.title} subTitle={this.state.home.subTitle} text={this.state.home.text}/>} />
+          <Route exact path="/about" render={() => <About id={this.state.about.id} title={this.state.about.title} />} />
+          <Route exact path="/cv" render={() => <CV id={this.state.cv.id} title={this.state.cv.title} />} />
           <Footer />
 
         </Container>
