@@ -22,30 +22,30 @@ class CV extends React.Component {
     })
   };
 
-  
+
 
   render () {
     const { cv } = this.state;
-    
-
+    const list = ["JavaScript", "React", "Test Driven Development", "Ruby"];
+    const jsxList = list.map((skill) => {
+      console.log(skill);
+      return <li>{skill}</li>
+    })
     return (
       <div className="full-screen" id={`${this.props.id}-title`} >
         <Hero title={this.props.title} />
         <Container className="mt-5" fluid={true}>
           <Row className="justify-content-around">
             <Col >
-            <Content>
+             <Content>
               <h1 id={`${this.props.id}-h1`}>{cv.title}</h1>
               <h4>Experience:</h4>
               <p>{cv.experience}</p>
-              {typeof cv.experience}
               <h4>Education:</h4>
               <p>{cv.education}</p>
               <h4>Skills:</h4>
-              <p>{cv.skills}</p>
-              {typeof cv.skills}
-              
-          </Content>
+              <p>{jsxList}</p>
+             </Content>
             </Col>
             <Col >
             <Content>
