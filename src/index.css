@@ -32,7 +32,7 @@ code {
   border-radius: 10px;
   width: 300px;
   height: 480px;
-  box-sizing: 0x 0px 3px 1px #ccc;
+  box-shadow: 0x 0px 3px 1px #ccc;
   object-fit: cover;
 }
 

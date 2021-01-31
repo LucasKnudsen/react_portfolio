@@ -12,7 +12,7 @@ class CV extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      cv: {}
+      cv: ''
     };
   };
   
@@ -20,13 +20,13 @@ class CV extends React.Component {
     axios.get('./data/cv.json').then(response => {
       this.setState({ cv: response.data })
     })
-  }
+  };
+
+  
 
   render () {
-
-    const skillList = this.state.cv.skills.forEach((skill) => {
-      return <li>{skill}</li>
-    })
+    const { cv } = this.state;
+    
 
     return (
       <div className="full-screen" id={`${this.props.id}-title`} >
@@ -35,12 +35,16 @@ class CV extends React.Component {
           <Row className="justify-content-around">
             <Col >
             <Content>
-              <h1 id={`${this.props.id}-h1`}>{this.state.cv.title}</h1>
+              <h1 id={`${this.props.id}-h1`}>{cv.title}</h1>
               <h4>Experience:</h4>
-              <p>{this.state.cv.experience}</p>
+              <p>{cv.experience}</p>
+              {typeof cv.experience}
               <h4>Education:</h4>
-              <p>{this.state.cv.education}</p>
+              <p>{cv.education}</p>
               <h4>Skills:</h4>
+              <p>{cv.skills}</p>
+              {typeof cv.skills}
+              
           </Content>
             </Col>
             <Col >
