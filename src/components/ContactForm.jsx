@@ -28,47 +28,10 @@ class ContactForm extends Component {
     handleChange = (e) => this.setState({ [e.target.name]: e.target.value });
 
     render() {
-        const { name, email, message } = this.state;
+        // const { name, email, message } = this.state;
         return (
-            <form id="contact-form" onSubmit={this.handleSubmit} netlify name="contact">
-                <input type="hidden" name="form-name" value="contact" />
-                <p>
-                    <label>
-                        Your Name:
-                        <input
-                            type="text"
-                            name="name"
-                            value={name}
-                            onChange={this.handleChange}                        
-                        />
-                    </label>
-                </p>
-                <p>
-                    <label>
-                        Your Email:
-                        <input
-                            type="email"
-                            name="email"
-                            value={email}
-                            onChange={this.handleChange}                        
-                        />
-                    </label>
-                </p>
-                <p>
-                    <label>
-                        Message:
-                        <textarea
-                            name="message"
-                            value={message}
-                            onChange={this.handleChange}                        
-                        />
-                    </label>
-                </p>
-                <p>
-                    <button type="submit">Send</button>
-                </p>
-            </form>
-            <Form>
+                           
+            <Form id="contact-form" onSubmit={this.handleSubmit} netlify name="contact">
               <Form.Group>
                 <Form.Label htmlFor="full-name">Full Name</Form.Label>
                 <Form.Control id="full-name" name="name" type="text" value={this.state.name} onChange={this.handleChange}/>

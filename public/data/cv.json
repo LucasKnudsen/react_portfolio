@@ -1,5 +1,6 @@
 {
   "title": "Curriculum Vitae",
   "experience": "Full-fledged React master with backend Rails capabilities.",
-  "education": "3 intense months at Craft Academy. Now, I'm basically an expert!"
+  "education": "3 intense months at Craft Academy. Now, I'm basically an expert!",
+  "skills": ["JavaScript", "React", "Test Driven Development", "Ruby"]
 }

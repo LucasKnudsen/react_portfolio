@@ -24,6 +24,10 @@ class CV extends React.Component {
 
   render () {
 
+    const skillList = this.state.cv.skills.forEach((skill) => {
+      return <li>{skill}</li>
+    })
+
     return (
       <div className="full-screen" id={`${this.props.id}-title`} >
         <Hero title={this.props.title} />
@@ -34,8 +38,9 @@ class CV extends React.Component {
               <h1 id={`${this.props.id}-h1`}>{this.state.cv.title}</h1>
               <h4>Experience:</h4>
               <p>{this.state.cv.experience}</p>
-              <h4>Education</h4>
+              <h4>Education:</h4>
               <p>{this.state.cv.education}</p>
+              <h4>Skills:</h4>
           </Content>
             </Col>
             <Col >
