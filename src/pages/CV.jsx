@@ -6,7 +6,7 @@ import axios from 'axios'
 
 import Hero from '../components/Hero'
 import Content from '../components/Content'
-// import ContactForm from '../components/ContactForm'
+import ContactForm from '../components/ContactForm'
 
 class CV extends React.Component {
   constructor(props) {
@@ -40,7 +40,7 @@ class CV extends React.Component {
             </Col>
             <Col >
             <Content>
-              {/* <ContactForm /> */}
+              <ContactForm />
             </Content>
             </Col>
           </Row>
