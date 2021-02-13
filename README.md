@@ -1,4 +1,6 @@
-# My React Portfolio
+# My React Portfolio  
+
+Deployed version: https://code-n-tonic.netlify.app/  
 
 ## Not deployed
 -------
